@@ -62,3 +62,15 @@ MonoBehaviour:
     pitch: 0.59
     loop: 0
     source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: e4a989791b553bd4dbd896162fb9d9b9, type: 3}
+    volume: 0.31
+    pitch: 0.59
+    loop: 0
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 4f1cfd81b9136514493d33bc2c6fed4e, type: 3}
+    volume: 0.31
+    pitch: 0.59
+    loop: 0
+    source: {fileID: 0}

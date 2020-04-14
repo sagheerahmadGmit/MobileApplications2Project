@@ -63,23 +63,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\__Scripts\AudioManager.cs" />
+    <Compile Include="Assets\__Scripts\Bullet\Bullet.cs" />
+    <Compile Include="Assets\__Scripts\Bullet\BulletDamage.cs" />
+    <Compile Include="Assets\__Scripts\colliderScript.cs" />
+    <Compile Include="Assets\__Scripts\Enemy\DamageHandler.cs" />
     <Compile Include="Assets\__Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\__Scripts\Enemy\EnemyShooting.cs" />
     <Compile Include="Assets\__Scripts\Enemy\EnemySpawner.cs" />
     <Compile Include="Assets\__Scripts\Enemy\MoveEnemy.cs" />
-    <Compile Include="Assets\__Scripts\Menu\CurrentScore.cs" />
-    <Compile Include="Assets\__Scripts\Menu\Invulnerability.cs" />
+    <Compile Include="Assets\__Scripts\Explosion.cs" />
+    <Compile Include="Assets\__Scripts\Menu\Difficulty.cs" />
     <Compile Include="Assets\__Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\__Scripts\Menu\PauseMenu.cs" />
-    <Compile Include="Assets\__Scripts\Menu\playerDied.cs" />
-    <Compile Include="Assets\__Scripts\Player\Bullet.cs" />
-    <Compile Include="Assets\__Scripts\Player\DamageHandler.cs" />
+    <Compile Include="Assets\__Scripts\Player\Health.cs" />
+    <Compile Include="Assets\__Scripts\Player\Invulnerability.cs" />
     <Compile Include="Assets\__Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\__Scripts\Player\PlayerSpawner.cs" />
-    <Compile Include="Assets\__Scripts\Player\Score.cs" />
+    <Compile Include="Assets\__Scripts\Player\PowerUp.cs" />
     <Compile Include="Assets\__Scripts\Player\WeaponController.cs" />
+    <Compile Include="Assets\__Scripts\Score\CurrentScore.cs" />
+    <Compile Include="Assets\__Scripts\Score\playerDied.cs" />
+    <Compile Include="Assets\__Scripts\Score\Score.cs" />
     <Compile Include="Assets\__Scripts\Sound.cs" />
-    <Compile Include="Assets\colliderScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

@@ -42,8 +42,8 @@ public class PlayerSpawner : MonoBehaviour {
 		
         if (numLives <= 0)
         {
-            FindObjectOfType<AudioManager>().Play("PlayerDeath");
-            SceneManager.LoadScene("GameLost");
+            FindObjectOfType<AudioManager>().Play("GameOver");
+            SceneManager.LoadScene("GameLost");                    
         }
 	}
 

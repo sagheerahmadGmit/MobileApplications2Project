@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7094235755303812984}
   - component: {fileID: 237258700147452329}
   - component: {fileID: 2515734109882575874}
-  - component: {fileID: 4913630913923671494}
   - component: {fileID: 3619943886970775536}
   - component: {fileID: -2012187774274410709}
+  - component: {fileID: -5851351882470831700}
   m_Layer: 8
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -132,19 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13, y: 0.54}
   m_EdgeRadius: 0
---- !u!114 &4913630913923671494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9078195783482163945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb5fc80858a8046439d39c9717648258, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
 --- !u!114 &3619943886970775536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,3 +241,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-5851351882470831700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9078195783482163945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2fef747ea819d4d93a79fe49ef89d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
