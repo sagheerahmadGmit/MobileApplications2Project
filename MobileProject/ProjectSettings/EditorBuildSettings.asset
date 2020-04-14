@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/__Scenes/Menu.unity
     guid: 104e4c9b2c1e7cf4cbb10c874c5dbe73
   - enabled: 1
-    path: Assets/__Scenes/EndPage.unity
+    path: Assets/__Scenes/GameLost.unity
     guid: 6ac284b117970b44dbfbfd4b22210235
+  - enabled: 1
+    path: Assets/__Scenes/Level2.unity
+    guid: c987131a2edde494485caa38ef1ff393
+  - enabled: 1
+    path: Assets/__Scenes/GameOver.unity
+    guid: e41a488fb25e0cf4a9898d90f4c50619
+  - enabled: 1
+    path: Assets/__Scenes/Level3.unity
+    guid: 21391dd65e36a854689c313ca3e12a0b
   m_configObjects: {}

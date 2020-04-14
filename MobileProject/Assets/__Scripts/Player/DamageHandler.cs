@@ -7,77 +7,21 @@ public class DamageHandler : MonoBehaviour
 {
     public int health = 1;
 
-    public static float invulnPeriod = 0;
-    float invulnTimer = 0;
-    int correctLayer;
     public static int newScore;
     public static int highScore = 0;
-
-    SpriteRenderer spriteRend;
-
-    void Start()
-    {
-        correctLayer = gameObject.layer;
-
-        // This only get the renderer on the parent object.
-        // In other words, it doesn't work for children. I.E. "enemy01"
-        spriteRend = GetComponent<SpriteRenderer>();
-
-        if (spriteRend == null)
-        {
-            spriteRend = transform.GetComponentInChildren<SpriteRenderer>();
-
-            if (spriteRend == null)
-            {
-                Debug.LogError("Object '" + gameObject.name + "' has no sprite renderer.");
-            }
-        }
-    }
+    public static int playerDied = 0;
 
     void OnTriggerEnter2D()
     {
         health--;
-        //newScore =  Score.scoreValue += 10;
-        //Score.scoreValue += 10;
-        if (invulnPeriod > 0)
-        {
-            invulnTimer = invulnPeriod;
-            gameObject.layer = 10;
-        }
     }
 
     void Update()
     {
-
-        if (invulnTimer > 0)
-        {
-            invulnTimer -= Time.deltaTime;
-
-            if (invulnTimer <= 0)
-            {
-                gameObject.layer = correctLayer;
-                if (spriteRend != null)
-                {
-                    spriteRend.enabled = true;
-                }
-            }
-            else
-            {
-                if (spriteRend != null)
-                {
-                    spriteRend.enabled = !spriteRend.enabled;
-                }
-            }
-        }
-
         if (health <= 0)
         {
             //Player has no more lives
             Die();
-            //newScore = Score.scoreValue += 10;
-            //Score.scoreValue += 10;
-            //Score.scoreValue = 0;
-            //SceneManager.LoadScene("EndPage");
         }
     }
 
@@ -88,11 +32,30 @@ public class DamageHandler : MonoBehaviour
         Score.scoreValue += 10/2;
         newScore = Score.scoreValue;
 
+        if (newScore == 50)
+        {
+            SceneManager.LoadScene("Level2");
+            playerDied = 0;
+        }
+
+        if (newScore == 100)
+        {
+            SceneManager.LoadScene("Level3");
+            playerDied = 0;
+        }
+
+        if (newScore == 150)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+
         if (highScore < newScore)
         {
             highScore = newScore;
         }
 
         Debug.Log("Player Died");
+
+        playerDied++;
     }
 }

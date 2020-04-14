@@ -8,6 +8,9 @@ public class MainMenu : MonoBehaviour
     public void playGame()
     {
         FindObjectOfType<AudioManager>().Play("Click");
+        Score.scoreValue = 0;
+        PlayerSpawner.numLives = 4;
+        DamageHandler.playerDied = 0;
         SceneManager.LoadScene("Game");
     }
 

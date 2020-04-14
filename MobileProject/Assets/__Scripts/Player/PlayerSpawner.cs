@@ -4,23 +4,24 @@ using UnityEngine.SceneManagement;
 
 public class PlayerSpawner : MonoBehaviour {
 
+    //get the player prefab and instance
 	public GameObject playerPrefab;
 	GameObject playerInstance;
 
-	public int numLives = 4;
+    //number of lives of player and respawn player
+	public static int numLives = 4;
 	float respawnTimer;
-
-	// Use this for initialization
-	void Start () {
-		SpawnPlayer();
-	}
+    
+    // Use this for initialization
+    void Start () {
+        SpawnPlayer();
+    }
 
 	void SpawnPlayer() {
-        //FindObjectOfType<AudioManager>().Play("PlayerRespawn");
         numLives--;
-        DamageHandler.invulnPeriod = 5f;
         respawnTimer = 1;
 		playerInstance = (GameObject)Instantiate(playerPrefab, transform.position, Quaternion.identity);
+        StartCoroutine("GetInvulnerable");
     }
 	
 	// Update is called once per frame
@@ -41,9 +42,15 @@ public class PlayerSpawner : MonoBehaviour {
 		
         if (numLives <= 0)
         {
-            Score.scoreValue = 0;
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
-            SceneManager.LoadScene("EndPage");
+            SceneManager.LoadScene("GameLost");
         }
 	}
+
+    IEnumerator GetInvulnerable()
+    {
+        Physics2D.IgnoreLayerCollision(8, 9, true);
+        yield return new WaitForSeconds(3f);
+        Physics2D.IgnoreLayerCollision(8, 9, false);
+    }
 }

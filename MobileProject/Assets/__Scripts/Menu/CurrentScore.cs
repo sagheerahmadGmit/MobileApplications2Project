@@ -11,12 +11,14 @@ public class CurrentScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //get the text from the screen
         score = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //score to be displayed on game over screen
         score.text = "" + DamageHandler.newScore;
     }
 }
