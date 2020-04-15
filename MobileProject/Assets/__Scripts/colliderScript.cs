@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class colliderScript : MonoBehaviour
 {
+    //get the game objects
     public int counter;
     GameObject meteor;
     GameObject meteor1;
@@ -12,6 +13,7 @@ public class colliderScript : MonoBehaviour
 
     private void Start()
     {
+        //find the gameobjects and save them into the variables
         meteor = GameObject.Find("Asteroid");
         meteor1 = GameObject.Find("Asteroid (1)");
         meteor2 = GameObject.Find("Asteroid (2)");
@@ -20,10 +22,14 @@ public class colliderScript : MonoBehaviour
 
     private void Update()
     {
+        //get the count of enemies and players colliding with the asteroids
         counter = DamageHandler.playerDied;
         
+        //if the counter is over 10 destroy all asteroids
+        //this is so the player cannot use the asteroids as cover
         if (counter == 10)
         {
+            //destroy the asteroids
             Destroy(meteor);
             Destroy(meteor1);
             Destroy(meteor2);
@@ -31,13 +37,16 @@ public class colliderScript : MonoBehaviour
         }
     }
 
+    //get the collisions
     private void OnCollisionEnter2D(Collision2D collision)
     {       
+        //save the component
         var asteroid = collision.collider.GetComponent<EnemySpawner>();
         if (asteroid)
         {
+            //destroy anything that collides with the asteroid
             Destroy(asteroid.gameObject);
         }
-        print(collision);
+        Debug.Log(collision);
     }
 }

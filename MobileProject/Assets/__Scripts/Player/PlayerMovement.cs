@@ -4,47 +4,34 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    //player and rotation speed
     public float maxSpeed = 5f;
     public float rotSpeed = 180f;
 
+    //Border boundary
     float shipBoundaryRadius = 0.5f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         // ROTATE the ship.
-
-        // Grab our rotation quaternion
+        // get the rotation quaternion
         Quaternion rot = transform.rotation;
-
-        // Grab the Z euler angle
+        //get the Z euler angle
         float z = rot.eulerAngles.z;
-
         // Change the Z angle based on input
         z -= Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime;
-
         // Recreate the quaternion
         rot = Quaternion.Euler(0, 0, z);
-
-        // Feed the quaternion into our rotation
+        // Feed the quaternion into the rotation
         transform.rotation = rot;
 
         // MOVE the ship.
         Vector3 pos = transform.position;
-
         Vector3 velocity = new Vector3(0, Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime, 0);
-
         pos += rot * velocity;
 
         // RESTRICT the player to the camera's boundaries!
-
         // Vertical boundaries
         // orthographic is the projection type of the camera
         // and the size is 5
@@ -72,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             pos.x = -orthographicWidth + shipBoundaryRadius;
         }
 
-        // Finally, update our position!!
+        //update our position
         transform.position = pos;
 
 

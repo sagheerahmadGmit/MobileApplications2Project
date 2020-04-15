@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour {
 
+    //get the enemy prefab
 	public GameObject enemyPrefab;
 
     //How far the enemies will spawn
@@ -25,6 +26,7 @@ public class EnemySpawner : MonoBehaviour {
 
             nextEnemy = enemyRate;
 
+            //make the enemy faster for level 2
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2"))
             {
                 //make the enemies spawn faster and faster by 10%
@@ -33,6 +35,7 @@ public class EnemySpawner : MonoBehaviour {
                     enemyRate = 2;
             }
 
+            //make the enemy even faster for level 3
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level3"))
             {
                 //make the enemies spawn faster and faster by 20%
@@ -40,7 +43,7 @@ public class EnemySpawner : MonoBehaviour {
                 if (enemyRate < 2)
                     enemyRate = 2;
             }
-
+            //spawn the enemy
             SpawnEnemy();
         }
     }

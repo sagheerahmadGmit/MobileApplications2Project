@@ -11,7 +11,7 @@ public class CurrentScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //get the text from the screen
+        //get the text component
         score = GetComponent<Text>();
     }
 

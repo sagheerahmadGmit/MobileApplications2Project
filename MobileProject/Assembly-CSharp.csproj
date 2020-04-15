@@ -76,10 +76,8 @@
     <Compile Include="Assets\__Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\__Scripts\Menu\PauseMenu.cs" />
     <Compile Include="Assets\__Scripts\Player\Health.cs" />
-    <Compile Include="Assets\__Scripts\Player\Invulnerability.cs" />
     <Compile Include="Assets\__Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\__Scripts\Player\PlayerSpawner.cs" />
-    <Compile Include="Assets\__Scripts\Player\PowerUp.cs" />
     <Compile Include="Assets\__Scripts\Player\WeaponController.cs" />
     <Compile Include="Assets\__Scripts\Score\CurrentScore.cs" />
     <Compile Include="Assets\__Scripts\Score\playerDied.cs" />
