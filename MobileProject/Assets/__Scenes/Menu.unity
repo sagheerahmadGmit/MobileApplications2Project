@@ -434,10 +434,21 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1131158729}
+        m_MethodName: SetVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &368915712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,6 +2073,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089918098}
   m_CullTransparentMesh: 0
+--- !u!114 &1131158729 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 890308865259481988, guid: 7b1a9777e13ae0243a1f258e50beb062,
+    type: 3}
+  m_PrefabInstance: {fileID: 1879678077}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3921472e2c22441977d3c021b93a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1174812270
 GameObject:
   m_ObjectHideFlags: 0
@@ -4926,7 +4949,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: The aim of the game is to beat all the levels. The levels get harder with
-    faster enemies and more asteroids to avoid. The player need to reach a specific
+    faster enemies and more asteroids to avoid. The player needs to reach a specific
     score to get to the next level.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
